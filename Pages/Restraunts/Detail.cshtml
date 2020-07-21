@@ -1,0 +1,24 @@
+﻿@page "{id:int}"
+@model OdeToFood.Pages.Restraunts.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>Detail</h1>
+<div>
+    ID: @Model.restraunt.Id
+</div>
+<div>
+    Name: @Model.restraunt.Name
+</div>
+<div>
+    Location: @Model.restraunt.Location
+</div>
+<div>
+    Cuisine Type: @Model.restraunt.Cuisine
+</div>
+@if(@Model.Message!=null){
+     <div class="alert alert-info">@Model.Message</div>  
+}
+
+<a asp-page="./List" class="btn btn-dark">Back To All Restraunts</a>

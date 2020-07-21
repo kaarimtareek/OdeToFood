@@ -1,0 +1,32 @@
+﻿@page
+@model OdeToFood.Pages.Restraurants.ListModel
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>Restraunts</h1>
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchRes" />
+            <span class="input-group-btn">
+                <button class="btn btn-outline-light">
+                    <i class="navbar-toggler-icon"></i>
+                </button>
+            </span>
+        </div>
+
+    </div>
+
+</form>
+@foreach(var restraunt in Model.Restraunts)
+{
+
+    <partial name="_Summary"model="restraunt"/>
+}
+<a asp-page="./Edit" class="btn btn-primary">Create New</a>
+
+@section footer{
+    <div> Hello From Footer</div>
+
+}

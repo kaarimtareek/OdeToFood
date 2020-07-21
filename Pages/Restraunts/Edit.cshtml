@@ -1,0 +1,32 @@
+﻿@page "{id:int?}"
+@model OdeToFood.Pages.Restraunts.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="restraunt.Id" />
+    <div class="form-group">
+        <label asp-for="restraunt.Name"></label>
+        <input asp-for="restraunt.Name" class="form-control" />
+        <span class="text-danger" asp-validation-for="restraunt.Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="restraunt.Location"></label>
+        <input asp-for="restraunt.Location" class="form-control" />
+        <span class="text-danger" asp-validation-for="restraunt.Location"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="restraunt.Cuisine"></label>
+        <select asp-for="restraunt.Cuisine" class="form-control"
+                asp-items="Model.Cuisines"></select>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

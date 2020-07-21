@@ -1,0 +1,10 @@
+﻿@page "{id:int}"
+@model OdeToFood.Pages.Restraunts.DeleteModel
+
+
+    <h2>Delete !</h2>
+    <div class="alert alert-danger" >Are you sure to Delete ?? @Model.Restraunt.Name </div>
+    <form method="post">
+        <button type="submit" class="btn btn-danger">Yes I'm Sure</button>
+        <a asp-page="List" class="btn btn-group" >Cancel</a>
+    </form>

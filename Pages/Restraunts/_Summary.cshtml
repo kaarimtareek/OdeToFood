@@ -1,0 +1,17 @@
+﻿@using OdeToFood.Core
+@model Restraunt 
+
+<div >
+    <h3>@Model.Name</h3>
+    <div>Location : @Model.Location</div>
+    <div>Cuisine : @Model.Cuisine</div>
+    <div>
+
+        <a asp-page="./Detail" asp-route-id="@Model.Id">Details</a>
+        <a asp-page="./Edit" asp-route-id="@Model.Id">Edit</a>
+        <a asp-page="./Delete" asp-route-id="@Model.Id">Delete</a>
+
+    </div>
+
+</div>
+
